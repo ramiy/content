@@ -89,3 +89,4 @@ NAN
 - {{CSSxRef("&lt;calc-sum&gt;")}}
 - {{CSSxRef("&lt;calc-product&gt;")}}
 - {{CSSxRef("&lt;calc-value&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
