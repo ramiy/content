@@ -1,0 +1,91 @@
+---
+title: <calc-constant>
+slug: Web/CSS/calc-constant
+page-type: css-type
+tags:
+  - CSS
+  - CSS Data Type
+  - Data Type
+  - Layout
+  - Reference
+  - Web
+browser-compat: css.types.calc-constant
+---
+
+{{CSSRef}}
+
+The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents common constants such as `e` and `pi`.
+These constants are supported for convenience in CSS so that authors do not have to manually write or calculate them.
+Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations.
+If used outside of a calculation, they're treated like any other keyword.
+For example:
+
+- `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
+- `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
+
+Using `infinity` or `-infinity` is intended to be more convenient for authors to create large fake rather than calculating or generating them through other means.
+Although `infinity` and `NaN` are not technically numbers, they are evaluated as {{cssxref("number")}} values, so an expression like `calc(infinity * 1px)` can be used to create an infinite {{cssxref("length")}} value, for example.
+
+`NaN` is case-sensitive, but other CSS constants are case-insensitive (e.g., `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are valid).
+
+## Syntax
+
+The `<calc-constant>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
+
+### Values
+
+- `e`
+
+  - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
+
+- `pi`
+
+  - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
+
+- `infinity` & `-infinity`
+
+  - : An infinite value, used to indicate the largest/smallest possible value.
+
+- `NaN`
+  - : A value representing "Not a Number". This constant case-sensitive.
+
+### Formal syntax
+
+{{CSSSyntax}}
+
+## Examples
+
+### Valid values
+
+```plain example-good
+e
+-e
+E
+pi
+-pi
+infinity
+-infinity
+InFiNiTy
+NaN
+```
+
+### Invalid values
+
+```plain example-bad
+nan
+NAN
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{CSSxRef("&lt;calc-sum&gt;")}}
+- {{CSSxRef("&lt;calc-product&gt;")}}
+- {{CSSxRef("&lt;calc-value&gt;")}}
