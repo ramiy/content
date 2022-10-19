@@ -24,7 +24,7 @@ For example:
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
 Using `infinity` or `-infinity` is intended to be more convenient for authors to create large fake rather than calculating or generating them through other means.
-Although `infinity` and `NaN` are not technically numbers, they are evaluated as {{cssxref("number")}} values, so an expression like `calc(infinity * 1px)` can be used to create an infinite {{cssxref("length")}} value, for example.
+In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, so an expression like `calc(infinity * 1px)` can be used to create an infinite {{cssxref("length")}} value, for example.
 
 `NaN` is case-sensitive, but other CSS constants are case-insensitive (e.g., `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are valid).
 
@@ -47,7 +47,7 @@ The `<calc-constant>` type defines numeric constants that can be used in [CSS ma
   - : An infinite value, used to indicate the largest/smallest possible value.
 
 - `NaN`
-  - : A value representing "Not a Number". This constant case-sensitive.
+  - : A value representing "Not a Number". This constant is case-sensitive.
 
 ### Formal syntax
 
