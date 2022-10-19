@@ -23,7 +23,7 @@ For example:
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 
-Using `infinity` or `-infinity` is intended to be more convenient for authors to create large fake rather than calculating or generating them through other means.
+Using `infinity` or `-infinity` is intended to be convenient for authors to create large mock values rather than calculating or generating them through other means.
 In math functions, `<calc-constant>` values are evaluated as {{cssxref("number")}} values, so an expression like `calc(infinity * 1px)` can be used to create an infinite {{cssxref("length")}} value, for example.
 
 `NaN` is case-sensitive, but other CSS constants are case-insensitive (e.g., `calc(pi)`, `calc(E)` and `calc(InFiNiTy)` are valid).
